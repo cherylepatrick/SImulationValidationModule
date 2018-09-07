@@ -43,9 +43,9 @@ void SimulationValidationModule::initialize(const datatools::properties& myConfi
   tree_->SetDirectory(hfile_);
  
   // Some basic counts
-  tree_->Branch("h_vertex_x_",&validation_.h_vertex_x_);
-  tree_->Branch("h_vertex_y_",&validation_.h_vertex_y_);
-  tree_->Branch("h_vertex_z_",&validation_.h_vertex_z_);
+  tree_->Branch("h_vertex_x",&validation_.h_vertex_x_);
+  tree_->Branch("h_vertex_y",&validation_.h_vertex_y_);
+  tree_->Branch("h_vertex_z",&validation_.h_vertex_z_);
   this->_set_initialized(true);
 }
 //! [ValidationModule::Process]

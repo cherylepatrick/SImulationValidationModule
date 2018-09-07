@@ -7,9 +7,9 @@
 # The "flreconstruct.plugins" section to tell flreconstruct what
 # to load and from where.
 [name="flreconstruct.plugins" type="flreconstruct::section"]
-plugins : string[1] = "ValidationModule"
+plugins : string[1] = "SimulationValidationModule"
 # Adjust this path if you put the lib elsewhere
-ValidationModule.directory : string = "@PROJECT_BINARY_DIR@"
+SimulationValidationModule.directory : string = "@PROJECT_BINARY_DIR@"
 
 # - Pipeline configuration
 # Must define "pipeline" as this is the module flreconstruct will use
@@ -20,4 +20,4 @@ ValidationModule.directory : string = "@PROJECT_BINARY_DIR@"
 [name="pipeline" type="dpp::chain_module"]
 modules : string[1] = "processing"
 
-[name="processing" type="ValidationModule"]
+[name="processing" type="SimulationValidationModule"]
